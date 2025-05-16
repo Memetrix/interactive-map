@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="map-container" id="main-map">
+  <img id="map-image" src="" alt="Карта">
+  <div id="arrow-up" class="arrow up" onclick="move('up')">⬆️</div>
+  <div id="arrow-down" class="arrow down" onclick="move('down')">⬇️</div>
+  <div id="arrow-left" class="arrow left" onclick="move('left')">⬅️</div>
+  <div id="arrow-right" class="arrow right" onclick="move('right')">➡️</div>
+  <div id="toggle-map" class="toggle-map" onclick="toggleFullMap()">🗺️</div>
+</div>
+<div class="map-container hidden" id="full-map"></div>
+<script src="script.js"></script>
+</body>
+</html>
