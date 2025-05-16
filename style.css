@@ -28,7 +28,7 @@ body {
 }
 .arrow {
   position: absolute;
-  font-size: 6vw;
+  font-size: clamp(24px, 6vw, 64px);
   color: #ffbd30;
   cursor: pointer;
   user-select: none;
@@ -64,7 +64,7 @@ body {
   transform: translateY(-50%);
 }
 .toggle-map {
-  font-size: 5vw;
+  font-size: clamp(20px, 5vw, 48px);
   color: #ffbd30;
   position: absolute;
   bottom: 10px;
