@@ -117,7 +117,7 @@ function scanAvailableImages() {
       const img = new Image();
       img.onload = () => {
         availableImages.push({ x, y });
-        if (x === 0 && y === 0) updateMap();
+        if (x === 0 && y === 0 && !window._updated) { updateMap(); window._updated = true; }
       };
       img.src = getImagePath(x, y);
     }
