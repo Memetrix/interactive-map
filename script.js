@@ -10,12 +10,10 @@ const getImagePath = (x, y) => `images/map_${getLetter(x)}_${y + 1}.png`;
 function updateMap() {
   const imagePath = getImagePath(position.x, position.y);
   const img = new Image();
-
   img.onload = () => {
     document.getElementById('map-image').src = imagePath;
     toggleArrows();
   };
-
   img.onerror = () => console.warn("Image not found:", imagePath);
   img.src = imagePath;
 }
@@ -50,7 +48,6 @@ function toggleArrows() {
 function toggleFullMap() {
   const main = document.getElementById('main-map');
   const full = document.getElementById('full-map');
-
   if (main.classList.contains('hidden')) {
     main.classList.remove('hidden');
     full.classList.add('hidden');
@@ -71,19 +68,12 @@ function renderFullMap() {
   const maxX = Math.max(...xs);
   const minY = Math.min(...ys);
   const maxY = Math.max(...ys);
-
   const cols = maxX - minX + 1;
   const rows = maxY - minY + 1;
 
-  const wasHidden = container.classList.contains('hidden');
-  if (wasHidden) container.classList.remove('hidden');
-
   const containerWidth = container.clientWidth;
-  const containerHeight = container.clientHeight;
   const tileWidth = containerWidth / cols;
-  const tileHeight = containerHeight / rows;
-
-  if (wasHidden) container.classList.add('hidden');
+  const tileHeight = tileWidth * 3 / 2;
 
   for (let y = minY; y <= maxY; y++) {
     for (let x = minX; x <= maxX; x++) {
@@ -133,5 +123,4 @@ function scanAvailableImages() {
     }
   }
 }
-
 scanAvailableImages();

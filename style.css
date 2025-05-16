@@ -10,9 +10,9 @@ body {
 }
 .map-container {
   position: relative;
-  width: 90vw;
-  aspect-ratio: 3 / 2;
-  max-width: 1024px;
+  height: 90vh;
+  aspect-ratio: 2 / 3;
+  max-width: 90vw;
   background-color: black;
   overflow: hidden;
   display: grid;
@@ -72,11 +72,14 @@ body {
   border-radius: 6px;
 }
 #full-map {
-  width: 90vw;
-  aspect-ratio: 3 / 2;
-  max-width: 1024px;
-  position: relative;
+  width: 100vw;
+  aspect-ratio: 2 / 3;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: #000;
+  position: relative;
+  margin: auto;
 }
 .hidden {
   display: none !important;
