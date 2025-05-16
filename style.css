@@ -10,7 +10,8 @@ body {
 }
 .map-container {
   position: relative;
-  height: 90vh;
+  max-height: 100vh;
+  height: auto;
   aspect-ratio: 2 / 3;
   max-width: 90vw;
   background-color: black;
@@ -19,6 +20,7 @@ body {
   place-items: center;
 }
 .map-container img {
+  object-fit: contain;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -75,9 +77,11 @@ body {
   border-radius: 6px;
 }
 #full-map {
+  max-height: 100vh;
   width: 100vw;
   aspect-ratio: 2 / 3;
-  max-height: 90vh;
+  max-max-height: 100vh;
+  height: auto;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #000;
